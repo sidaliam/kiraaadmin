@@ -1,0 +1,214 @@
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: 1px;
+ 
+ 
+}
+
+.listWrapper {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  gap: 20px;
+}
+
+.searchBarWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px; /* Ajoutez un espacement entre les éléments si nécessaire */
+  flex-direction: column;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 1504px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  background-color: #ffffff;
+}
+
+.listSearch {
+  width: 100%;
+  max-width: 200px; /* Ajustez la largeur selon vos besoins */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.lsTitle{
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.lsItem{
+  position: relative;
+  margin-bottom: 15px;
+
+}
+
+.lsItem>label{
+ display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.lsItem>input[type='text']{
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.lsItem>input[type='text']:focus {
+  border-color: #007bff;
+}
+
+.lsItem>span{
+  color: #007bff;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.lsItem>span:hover {
+  color: #004080;
+  
+}
+
+.lsItem .datePickerContainer {
+  position: relative;
+  height: 20px;
+}
+
+.datePicker {
+  position: fixed;
+  top: 10%; /* Ajustez la valeur pour le positionnement vertical */
+  left: 50%; /* Place le composant au centre horizontalement */
+  transform: translateX(-50%);
+  z-index: 1000; /* Assure que le composant est au-dessus du reste du contenu */
+  /* Autres styles pour le composant DateRange */
+  
+}
+
+.lsItem .datePickerContainer .datePicker {
+  
+  position: fixed;
+  top: 10%; /* Ajustez la valeur pour le positionnement vertical */
+  left: 50%; /* Place le composant au centre horizontalement */
+  transform: translateX(-50%);
+  z-index: 1000; 
+  height: 20px;/* Assure que le composant est au-dessus du reste du contenu */
+  /* Autres styles pour le composant DateRange */
+ 
+  /* Vos styles supplémentaires pour le calendrier ici */
+}
+
+
+.lsOptions{
+  padding: 10px;
+}
+
+.lsOptionItem{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 12px;
+}
+
+.lsOptionInput{
+  width: 50px;
+}
+
+.listSearch>button{
+  padding: 10px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.listResult {
+  flex: 3;
+}
+
+/* VotreComponent.css */
+
+.searchiconx {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.iconx {
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  padding-left: 10%;
+}
+
+.iconx:hover {
+  transform: scale(1.1); /* Animation de zoom au survol */
+  color: #007bff; /* Changement de couleur au survol */
+}
+
+.iconx:active {
+  transform: scale(0.9); /* Animation de réduction de taille au clic */
+}
+
+
+.iconxx {
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  padding-left: 10%;
+  padding-top: 10%;
+}
+
+.iconxx:hover {
+  transform: scale(1.1); /* Animation de zoom au survol */
+  color: #007bff; /* Changement de couleur au survol */
+  
+}
+
+.iconxx:active {
+  transform: scale(0.9); /* Animation de réduction de taille au clic */
+}
+
+/* VotreComponent.css */
+
+/* Stylisation de la liste de sélection */
+.selecRooms {
+  position: relative;
+  width: 130px; /* Largeur de la liste de sélection */
+}
+
+.selct {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+  overflow-y: auto; /* Active le défilement vertical */
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Autres styles restants pour la liste de sélection (options, survol, etc.) */
+
+.agg{
+  margin-left: 10px;
+}

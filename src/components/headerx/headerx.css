@@ -1,0 +1,331 @@
+.headerx {
+  background-color: #133fb7;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 150px;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px 10px 100px 10px; /* Ajuster la marge pour les écrans plus petits */
+  height: 250px;
+}
+
+.headerContainer.listMode {
+  margin: 20px 10px 0px 10px; /* Ajuster la marge pour les écrans plus petits */
+}
+
+.headerList {
+  display: flex;
+  flex-wrap: wrap; /* Permettre aux éléments de passer à la ligne sur des écrans plus petits */
+  gap: 20px; /* Réduire l'écart entre les éléments */
+  margin-bottom: 50px;
+  height: 250px;
+}
+
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerListItem.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.headerDesc {
+  margin: 20px 0px;
+}
+
+.headerBtn {
+  position: relative;
+  background-color: #0071c2;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20%;
+  margin-right: 17px;
+}
+
+.headerSearch {
+  position: absolute;
+  height: 30px;
+  background-color: white;
+  border: 3px solid #febb02;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -25px;
+  width: 96%;
+  max-width: 1024px;
+  
+}
+
+.headerIcon {
+  color: lightgray;
+  margin-left: 50px;
+}
+
+.headerSearchItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerSearchInput {
+  border: none;
+  outline: none;
+  touch-action: manipulation; /* Désactive les gestes de zoom pendant l'interaction tactile */
+  user-select: none; /* Empêche la sélection de texte qui pourrait causer le zoom */
+
+}
+
+.headerSearchText {
+  color: black;
+  cursor: pointer;
+}
+
+.date {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
+
+.options {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.optionItem {
+  width: 100%; /* Utiliser la largeur totale de l'écran */
+  max-width: 200px; /* Limiter la largeur maximale */
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+
+.selct {
+  width: 60px;
+  margin-right: 5px;
+}
+
+.date-range-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin-left: 100px;
+}
+
+input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+span {
+  margin: 0 10px;
+  font-size: small;
+}
+
+
+
+
+/* Styles de base */
+/* Styles de base */
+.icon-sliderc {
+ justify-content: center;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  margin-bottom: -20px;
+  align-items: center;
+
+}
+
+.icon-containerc {
+  flex: 0 0 auto;
+  width: 50px; /* Largeur initiale de chaque icône */
+  height: 50px; /* Hauteur initiale de chaque icône */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Couleur de fond du conteneur */
+  border-radius: 50%; /* Crée un cercle */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Animations de transition */
+  text-align: center;
+}
+
+.icon {
+  color: #001f4d; /* Couleur de l'icône */
+  font-size: 24px; /* Taille de l'icône */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Animations de transition */
+}
+
+.icon-name {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+
+/* Effet au survol (hover) */
+.icon-containerc:hover {
+  transform: scale(1.2); /* Zoom au survol */
+}
+
+.icon:hover {
+  transform: rotate(20deg); /* Rotation de l'icône au survol */
+  opacity: 0.7; /* Réduire l'opacité au survol */
+}
+
+
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+
+}
+
+/* Style pour le bouton de déconnexion (logout) */
+.logoutBtn {
+  background-color: #8b2821; /* Rouge */
+  color: white;
+}
+
+.logoutBtn:hover {
+  background-color: #ee1919; /* Rouge plus sombre au survol */
+}
+
+/* Style pour le bouton de connexion/inscription */
+.signInBtn {
+  background-color: #4caf50; /* Vert */
+  color: white;
+}
+
+.signInBtn:hover {
+  background-color: #388e3c; /* Vert plus sombre au survol */
+}
+
+
+
+.shop {
+  padding-bottom: 5px;
+  margin-bottom: -20px;
+  margin-left: 90%;
+  top: 50%; /* À mi-chemin verticalement */
+  right: 20px; /* Distance du côté droit */
+  transform: translateY(-50%); /* Ajuste la position verticale */
+  font-size: 24px; /* Taille de l'icône */
+  /* Ajoutez ici d'autres styles nécessaires */
+}
+
+
+
+/* Style pour le paragraphe du nom du profil */
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+  .icon-containerc {
+    width: 37px; /* Ajustement de la largeur pour les tablettes */
+    height: 37px; /* Ajustement de la hauteur pour les tablettes */
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .icon-containerc {
+    width: 37px; /* Ajustement de la largeur pour les appareils mobiles */
+    height: 37px; /* Ajustement de la hauteur pour les appareils mobiles */
+     
+  }
+ 
+  .headerBtn {
+    margin-top: 31px;
+    margin-right: 17px;
+  }
+}
+/* Changement au survol */
+.profile p {
+  font-size: 18px;
+  font-weight: bold; /* Passage en gras au survol */
+}
+
+.shop {
+  margin-bottom: -40px;
+
+}
+
+
+
+
+
+
+/* Media Query pour mobile */
+@media screen and (max-width: 480px) {
+ 
+
+  .headerList {
+    flex-direction: column; /* Afficher les éléments en colonne sur les mobiles */
+    gap: 10px; /* Ajustements d'écart pour les mobiles */
+  }
+
+  .headerListItem.active {
+    padding: 8px; /* Ajustement de la taille du padding pour les mobiles */
+  }
+
+  .headerSearch {
+    bottom: -15px; /* Ajustement de la position pour les mobiles */
+  }
+
+  .optionItem {
+    max-width: 120px; /* Ajustements de largeur maximale pour les mobiles */
+  }
+
+  span {
+    font-size: x-small;
+  }
+}

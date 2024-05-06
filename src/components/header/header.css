@@ -1,0 +1,380 @@
+.header {
+  background-color: #133fb7;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 200px;
+}
+
+a {
+  text-decoration: none; /* Supprime la décoration par défaut (soulignement) */
+  color: inherit; /* Utilise la couleur héritée du parent (dans ce cas, #333 pour les icônes) */
+}
+
+a:hover {
+  text-decoration: none; /* Au survol, garde la décoration supprimée */
+}
+
+
+.headerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px 10px 100px 10px; /* Ajuster la marge pour les écrans plus petits */
+  height: 250px;
+}
+
+.headerContainer.listMode {
+  margin: 20px 10px 0px 10px; /* Ajuster la marge pour les écrans plus petits */
+}
+
+.headerList {
+  display: flex;
+  flex-wrap: wrap; /* Permettre aux éléments de passer à la ligne sur des écrans plus petits */
+  gap: 20px; /* Réduire l'écart entre les éléments */
+  margin-bottom: 50px;
+  height: 250px;
+}
+
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerListItem.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.headerDesc {
+  margin: 20px 0px;
+}
+
+.headerBtn {
+  position: relative;
+  background-color: #0071c2;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20%;
+  margin-right: 17px;
+}
+
+.headerSearch {
+  position: absolute;
+  height: 30px;
+  background-color: white;
+  border: 3px solid #febb02;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -25px;
+  width: 96%;
+  max-width: 1024px;
+  
+}
+
+.headerIcon {
+  color: lightgray;
+  margin-left: 50px;
+}
+
+.headerSearchItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerSearchInput {
+  border: none;
+  outline: none;
+}
+
+.headerSearchText {
+  color: black;
+  cursor: pointer;
+}
+
+.date {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
+
+.options {
+  z-index: 2;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.optionItem {
+  width: 100%; /* Utiliser la largeur totale de l'écran */
+  max-width: 200px; /* Limiter la largeur maximale */
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+
+.optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+
+.selct {
+  width: 60px;
+  margin-right: 5px;
+}
+
+.date-range-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin-left: 100px;
+}
+
+input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+span {
+  margin: 0 10px;
+  font-size: small;
+}
+
+.shop {
+  padding-bottom: 0px;
+  margin-bottom: -10px;
+  margin-left: 90%;
+  top: 30%; /* À mi-chemin verticalement */
+  right: 20px; /* Distance du côté droit */
+  transform: translateY(95%); /* Ajuste la position verticale */
+  font-size: 35px; /* Taille de l'icône */
+  /* Ajoutez ici d'autres styles nécessaires */
+
+  
+}
+
+
+/* Styles de base */
+/* Styles de base */
+.icon-slider {
+ justify-content: center;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 30px;
+  padding: 0px;
+  margin-bottom: -120px;
+}
+
+.icon-container {
+  flex: 0 0 auto;
+  width: 60px; /* Largeur initiale de chaque icône */
+  height: 60px; /* Hauteur initiale de chaque icône */
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Couleur de fond du conteneur */
+  border-radius: 50%; /* Crée un cercle */
+}
+
+.icon {
+  color: #333; /* Couleur de l'icône */
+  font-size: 30px; /* Taille de l'icône */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Animations de transition */
+  
+
+}
+
+/* Effet au survol (hover) */
+.icon-container:hover {
+}
+
+.icon:hover {
+  transform: rotate(20deg); /* Rotation de l'icône au survol */
+  opacity: 0.7; /* Réduire l'opacité au survol */
+}
+
+.shop:hover {
+  opacity: 0.7; /* Réduire l'opacité au survol */
+}
+
+
+.icon-wrapper {
+  text-align: center; /* Centrer le contenu */
+  justify-content: center;
+  position: relative;
+  
+}
+
+.icon-title {
+  font-size: 14px; /* Taille du texte du titre */
+  margin-top: 5px; /* Espacement entre l'icône et le titre */
+  display: block; /* Pour assurer le saut de ligne et éviter que le titre ne soit à côté de l'icône */
+  transition: color 0.2s ease-in-out;
+}
+.icon-title:hover {
+  color: rgb(243, 8, 8); /* Couleur du texte au survol */
+}
+
+
+
+/* Media Queries pour la responsivité */
+
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+
+}
+
+/* Style pour le bouton de déconnexion (logout) */
+.logoutBtn {
+  background-color: #8b2821; /* Rouge */
+  color: white;
+}
+
+.logoutBtn:hover {
+  background-color: #ee1919; /* Rouge plus sombre au survol */
+}
+
+/* Style pour le bouton de connexion/inscription */
+.signInBtn {
+  background-color: #4caf50; /* Vert */
+  color: white;
+}
+
+.signInBtn:hover {
+  background-color: #388e3c; /* Vert plus sombre au survol */
+}
+
+
+
+
+
+
+
+
+/* Style pour le paragraphe du nom du profil */
+
+
+/* Changement au survol */
+.profile p {
+  font-size: 18px;
+  font-weight: bold; /* Passage en gras au survol */
+}
+
+
+@media (max-width: 810px) {
+  .icon-slider {
+  
+     gap: 10px;
+    
+   }
+  .icon-container {
+    margin-left: 20%;
+    width: 40px; /* Largeur initiale de chaque icône */
+    height: 40px; /* Hauteur initiale de chaque icône */
+    
+  }
+  .shop {
+    padding-bottom: 0px;
+    margin-bottom: 60px;
+    margin-left: 90%;
+    top: 30%; /* À mi-chemin verticalement */
+    right: 20px; /* Distance du côté droit */
+    transform: translateY(95%); /* Ajuste la position verticale */
+    font-size: 20px; /* Taille de l'icône */
+    /* Ajoutez ici d'autres styles nécessaires */
+  
+    
+  }
+  
+  .icon {
+    font-size: 20px; /* Taille de l'icône */
+
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .icon-container {
+    width: 40px; /* Ajustement de la largeur pour les appareils mobiles */
+    height: 40px; /* Ajustement de la hauteur pour les appareils mobiles */
+  }
+  button {
+   
+    margin-bottom: 30px;
+  }
+  .headerBtn {
+    margin-top: 31px;
+    margin-right: 17px;
+  }
+}
+
+
+
+/* Media Query pour mobile */
+@media screen and (max-width: 480px) {
+  .headerContainer {
+    margin: 20px 5px 30px 5px; /* Ajustements de marge pour les mobiles */
+  }
+
+  .headerList {
+    flex-direction: column; /* Afficher les éléments en colonne sur les mobiles */
+    gap: 10px; /* Ajustements d'écart pour les mobiles */
+  }
+
+  .headerListItem.active {
+    padding: 8px; /* Ajustement de la taille du padding pour les mobiles */
+  }
+
+  .headerSearch {
+    bottom: -15px; /* Ajustement de la position pour les mobiles */
+  }
+
+  .optionItem {
+    max-width: 120px; /* Ajustements de largeur maximale pour les mobiles */
+  }
+
+  span {
+    font-size: x-small;
+  }
+}

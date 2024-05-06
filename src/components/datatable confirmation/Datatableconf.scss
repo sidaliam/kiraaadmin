@@ -1,0 +1,14 @@
+.start-container {
+  position: absolute;
+  transform: translateX(-40%);
+  z-index: 1; /* Assurez-vous que le composant Start est au-dessus du reste du contenu */
+}
+.confirmed-row {
+  background-color: #18c164; /* Couleur verte */
+}
+.termin-row{
+  background-color: rgba(220, 20, 60, 0.6);
+}
+.notrep-row{
+  background-color: #ded9d99a;
+}

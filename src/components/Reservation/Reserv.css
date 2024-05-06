@@ -1,0 +1,143 @@
+.reserve {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.418);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+  }
+  
+  .Container {
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    overflow-y: auto; /* Ajout du défilement vertical */
+    max-height: 500px; /* Hauteur maximale avant l'apparition du défilement */
+    z-index: 30;
+  }
+  
+  .room-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+  }
+  .rClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  
+  .ritem {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+  }
+  
+  .rinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .rtitle {
+    font-weight: 500;
+  }
+  
+  .rdesc {
+    font-weight: 300;
+  }
+  
+  .rmax {
+    font-size: 12px;
+  }
+  
+  .rprice {
+    font-weight: 500;
+  }
+  
+  .rSelectRooms{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 8px;
+    color: gray;
+  }
+  
+  .room{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rbutton {
+    border: none;
+    padding: 10px 20px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Media queries pour la réactivité */
+@media screen and (max-width: 768px) {
+  .ritem {
+    flex-direction: column; /* Afficher les éléments en colonne sur les tablettes */
+    gap: 10px; /* Ajuster l'espacement entre les éléments */
+    padding: 10px; /* Ajuster le padding */
+  }
+
+  .rinfo {
+    gap: 3px; /* Réduire l'espacement entre les informations */
+  }
+
+  .rprice {
+    font-size: 14px; /* Augmenter la taille de la police pour les prix sur les tablettes */
+  }
+
+  .rSelectRooms {
+    font-size: 10px; /* Ajuster la taille de la police pour la sélection des chambres */
+  }
+
+  .rbutton {
+    padding: 8px 15px; /* Ajuster le padding du bouton pour les tablettes */
+    margin-top: 15px; /* Réduire l'espacement en haut du bouton */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ritem {
+    gap: 5px; /* Ajuster l'espacement entre les éléments pour les mobiles */
+    padding: 8px; /* Ajuster le padding pour les mobiles */
+  }
+
+  .rtitle {
+    font-size: 16px; /* Réduire la taille du titre pour les mobiles */
+  }
+
+  .rdesc {
+    font-size: 12px; /* Réduire la taille de la description pour les mobiles */
+  }
+
+  .rprice {
+    font-size: 12px; /* Réduire la taille des prix pour les mobiles */
+  }
+
+  .rSelectRooms {
+    font-size: 8px; /* Réinitialiser la taille de la police pour la sélection des chambres */
+  }
+
+  .rbutton {
+    padding: 6px 12px; /* Ajuster le padding du bouton pour les mobiles */
+    margin-top: 10px; /* Réduire l'espacement en haut du bouton pour les mobiles */
+  }
+}
+
+/* ... Votre autre code CSS ... */

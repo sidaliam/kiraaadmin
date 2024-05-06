@@ -1,0 +1,68 @@
+.homeContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+width: 100%;
+}
+
+.homeTitle {
+  font: 700 4em/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: .25em 0 .325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255,255,255,.5);
+  
+  
+
+
+  /* Clip Background Image */
+  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  animation: aitf 80s linear infinite; /* Propriété standard pour l'animation */
+
+  /* Activate hardware acceleration for smoother animations */
+  transform: translate3d(0,0,0); /* Propriété standard pour la transformation */
+  -webkit-transform: translate3d(0,0,0); /* Préfixe pour les navigateurs WebKit */
+  -moz-transform: translate3d(0,0,0); /* Préfixe pour les navigateurs Gecko */
+  -ms-transform: translate3d(0,0,0); /* Préfixe pour les navigateurs Edge */
+  
+  backface-visibility: hidden; /* Propriété standard pour la visibilité de la face arrière */
+  -webkit-backface-visibility: hidden; /* Préfixe pour les navigateurs WebKit */
+  -moz-backface-visibility: hidden; /* Préfixe pour les navigateurs Gecko */
+  -ms-backface-visibility: hidden; /* Préfixe pour les navigateurs Edge */
+}
+
+@keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+/* Media Query pour tablette */
+@media screen and (max-width: 768px) {
+  .homeTitle {
+    font-size: 18px; /* Ajuster la taille de la police pour les tablettes */
+    
+  }
+  .homeContainer {
+    
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+}
+
+/* Media Query pour mobile */
+@media screen and (max-width: 480px) {
+  .homeTitle {
+    font-size: 16px; /* Ajuster la taille de la police pour les mobiles */
+  }
+}

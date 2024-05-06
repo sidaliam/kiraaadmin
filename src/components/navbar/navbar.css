@@ -1,0 +1,178 @@
+/* Styles pour les écrans larges (ordinateurs de bureau) */
+.navbar {
+  height: 80px;
+  background-color: #003580;
+  display: flex;
+  justify-content: center;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar-logo {
+  width: 100px; /* Réglez la largeur souhaitée pour votre logo */
+  height: auto; /* Pour conserver les proportions */
+  margin-left: -40%;
+}
+
+.navButton {
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
+}
+
+.us {
+  display: flex;
+}
+.navItems {
+  margin-right: 5px;
+  display: inline-block; /* Pour s'assurer que les éléments respectent la marge */
+}
+
+
+/* Styles pour les tablettes */
+@media screen and (max-width: 1024px) {
+  .navContainer {
+    padding: 0 20px; /* Ajustez l'espacement selon vos besoins */
+  }
+  
+  .navButton {
+    margin-left: 10px; /* Modifiez la marge selon vos préférences */
+    padding: 5px 8px; /* Modifiez le rembourrage selon vos préférences */
+  }
+}
+
+/* Styles pour les mobiles */
+@media screen and (max-width: 768px) {
+  .navContainer {
+    
+    align-items: flex-start;
+    padding: 10px; /* Ajustez l'espacement selon vos besoins */
+  }
+
+  .navButton {
+    margin: 10px 0; /* Modifiez la marge selon vos préférences */
+  }
+}
+
+/* Styles de base pour le bouton */
+.btw {
+  background-color: #e0920bb7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Au survol du bouton */
+.btw:hover {
+  background-color: #001f4d;
+}
+
+/* Media queries pour la réactivité */
+/* Styles pour les tablettes */
+@media screen and (max-width: 1024px) {
+  .btw {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Styles pour les mobiles */
+@media screen and (max-width: 768px) {
+  .btw {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Styles de base pour le bouton */
+.btw {
+  background-color: #133fb7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Au survol du bouton */
+.btw:hover {
+  background-color: #001f4d;
+}
+
+/* Media queries pour la réactivité */
+/* Styles pour les tablettes */
+@media screen and (max-width: 1024px) {
+  .btw {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+}
+
+/* Styles pour les mobiles */
+@media screen and (max-width: 768px) {
+  .btw {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+
+/* Styles de base pour le bouton à l'intérieur du lien */
+.btx {
+  background-color: #c76e08c9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Pour supprimer le soulignement du lien */
+  display: inline-block; /* Pour que le bouton s'adapte à la taille du contenu */
+}
+
+/* Au survol du bouton */
+.btx:hover {
+  background-color: #001f4d;
+}
+
+/* Media queries pour la réactivité */
+/* Styles pour les tablettes */
+@media screen and (max-width: 1024px) {
+  .btx {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  #navbar-logo {
+ 
+    margin-left: auto;
+  }
+}
+
+/* Styles pour les mobiles */
+@media screen and (max-width: 768px) {
+  .btx {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  #navbar-logo {
+ 
+    margin-left: auto;
+  }
+}
