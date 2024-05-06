@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import useF from "../../Hooks/useF";
 import { AuthContext } from "../../context/Authcontext";
-import axios from "axios";
 import { useEffect } from "react";
 import { useContext } from "react";
 import header from "../../components/header/Header";
 import Header from "../../components/header/Header";
 import Navbar from "../../components/navbar/Navbar";
+import { axiosinstance } from "../../config";
 const Stats = () => {
   const [totale, settotale] = useState();
   const [confirm, setconfirm] = useState();
@@ -55,7 +55,7 @@ const Stats = () => {
     if (roomIds.length > 0) {
       const fetchRoomOrders = async () => {
         try {
-          const response = await axios.get(`/orders/byRoomIds`, {
+          const response = await axiosinstance.get(`/orders/byRoomIds`, {
             params: {
               roomIds: roomIds,
             },
