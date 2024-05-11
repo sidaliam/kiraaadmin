@@ -4,7 +4,7 @@
 
   .newContainer {
     flex: 6;
-    overflow-x: auto; // Ajout de la barre de défilement verticale si nécessaire
+    overflow-x: auto;
 
     .top,
     .bottom {
@@ -71,6 +71,13 @@
             cursor: pointer;
             margin-top: 10px;
           }
+
+          // Styles pour les petits écrans
+          @media only screen and (max-width: 768px) {
+            .formInput {
+              width: 100%; // Utilisez la largeur totale sur les petits écrans
+            }
+          }
         }
       }
     }
@@ -79,6 +86,6 @@
 
 .images-container{
   display: flex;
-  flex-wrap: wrap; // Assurez-vous que les images peuvent se déplacer sur plusieurs lignes si nécessaire
-  overflow-x: auto; // Ajout de la barre de défilement verticale si nécessaire
+  flex-wrap: wrap;
+  overflow-x: auto;
 }
