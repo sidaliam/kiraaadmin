@@ -299,35 +299,5 @@
 }
   }
 
-  @media screen and (max-width: 768px) {
-    // Styles spécifiques pour les tablettes
-    padding: 10px; // Ajuster la marge
-    .datatableTitle {
-      font-size: 20px; // Ajuster la taille de la police
-    }
-    .cellWithImg .cellImg {
-      width: 24px; // Ajuster la taille de l'image
-      height: 24px;
-      margin-right: 10px; // Ajuster la marge
-    }
-    .cellAction {
-      gap: 10px; // Ajuster l'espacement entre les éléments
-    }
-  }
 
-  @media screen and (max-width: 480px) {
-    // Styles spécifiques pour les mobiles
-    padding: 5px; // Réduire davantage la marge
-    .datatableTitle {
-      font-size: 18px; // Ajuster la taille de la police
-    }
-    .cellWithImg .cellImg {
-      width: 16px; // Ajuster la taille de l'image
-      height: 16px;
-      margin-right: 5px; // Ajuster la marge
-    }
-    .cellAction {
-      gap: 5px; // Ajuster l'espacement entre les éléments
-    }
-  }
 }
