@@ -1,0 +1,121 @@
+.containerb {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 220px;
+  gap: 10px;
+
+  > div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #0071c2;
+    position: relative;
+    overflow: hidden;
+
+    
+    .content {
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: #0071c2;
+      background: linear-gradient(
+        0deg,
+        #0071c2 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translatey(100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+      visibility: hidden;
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+    }
+
+    &:hover {
+      flex: 0 0 250px;
+      box-shadow: 1px 3px 15px #0071c2;
+      transform: translatey(-30px);
+    }
+
+    &:hover .content {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
+  }
+}
+
+
+.featuredItem {
+  position: relative;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 220px;
+  flex: 1;
+  margin-bottom: 20px; /* Ajouter un espace entre les éléments */
+}
+
+.featuredImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featuredTitles {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: rgb(255, 255, 255);
+}
+
+/* Media Query pour tablette */
+@media screen and (max-width: 768px) {
+  .featuredItem {
+    flex: 1 0 100%; /* Occuper 100% de la largeur sur des écrans plus petits */
+
+  }
+}
+
+/* Media Query pour mobile */
+@media screen and (max-width: 480px) {
+  .featuredItem {
+    height: 150px; /* Ajuster la hauteur pour les mobiles */
+  }
+}
+
+/* Media Query pour tablette */
+@media screen and (max-width: 768px) {
+  .containerb {
+    flex-direction: column; /* Change la direction en colonne pour s'adapter à l'écran plus étroit */
+    align-items: center; /* Centrer les éléments sur l'axe horizontal */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    display: none;
+  }
+
+  .featuredItem {
+    flex: 1 0 calc(50% - 20px); /* Occupent 50% de la largeur avec un espace entre eux */
+    margin-bottom: 20px; /* Espacement entre les éléments */
+  }
+}
+
+/* Media Query pour mobile */
+@media screen and (max-width: 480px) {
+  .featuredItem {
+    flex: 1 0 calc(100% - 20px); /* Occupent 100% de la largeur avec un espace entre eux */
+    margin-bottom: 20px; /* Espacement entre les éléments */
+    height: 150px; /* Ajuster la hauteur pour les mobiles */
+  }
+}
+

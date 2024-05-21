@@ -1,0 +1,146 @@
+/* Styles pour la carte */
+.card {
+	background-color: bleu;
+	border-radius: 10px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;  overflow: hidden;
+	transition: transform 0.3s ease;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	padding-right: 16px;
+	padding-top: 10px;
+  }
+  
+  
+  
+  /* Styles pour les propriétés en vedette */
+  .fp {
+	width: 100%;
+	max-width: 1500px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 20px;
+	margin-bottom: 20px;
+  }
+  
+  
+  
+  .fpItem {
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;	border-radius: 15px;
+	  overflow: hidden;
+	  padding: .25rem;
+	  position: relative;
+	  transition: .15s ease-in;
+	  
+	  &:hover, &:focus-within {
+		  box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(#000, .1);
+			  transform: translatey(-5px);
+	  }
+  }
+  
+  .fpItem :hover {box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(#000, .1);}
+  
+  
+  
+  .fpImg {
+	width: 300px;
+	height: 300px; /* Ajuster la hauteur de l'image de manière proportionnelle */
+   margin-left: 20PX;
+	object-fit: cover;
+	border-radius: 5%;
+	
+	
+  }
+  
+  .fpName {
+	margin-top: 1.5rem;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  a {
+		  font-weight: 600;
+		  font-size: 1.375rem;
+		  line-height: 1.25;
+		  padding-right: 1rem;
+		  text-decoration: none;
+		  color: inherit;
+		  will-change: transform;
+		  &:after {
+			  content: "";
+			  position: absolute;
+			  left: 0;
+			  top: 0;
+			  right: 0;
+			  bottom: 0;
+		  }
+	  }
+  }
+  
+  .fpCity {
+	display: flex;
+	  align-items: center;
+	  color: #787878;
+	  &:first-child:after {
+		  display: block;
+		  content: "";
+		  width: 4px;
+		  height: 4px;
+		  border-radius: 50%;
+		  background-color: currentcolor;
+		  margin-left: .75rem;
+		  margin-right: .75rem;
+	  }
+  
+  }
+  
+  .fpPrice {
+	font-weight: 800;
+	margin-top: 5px; /* Ajout de marge pour espacer les infos */
+	white-space: pre-line; /* Forcer le saut de ligne */
+	display: block; /* Forcer le saut de ligne */
+  }
+  
+  .showMoreButtonContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	margin-bottom: 15px;
+  }
+  
+  .showMoreButton {
+	padding: 8px 16px;
+	font-size: 14px;
+	background-color: #0036b3;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .showMoreButton:hover {
+	background-color: #007bff;
+  }
+  
+  
+  
+  /* Media Query pour tablette */
+  @media screen and (max-width: 768px) {
+	.fpImg {
+	  height: 200px; /* Ajuster la hauteur maximale pour les tablettes */
+	}
+  }
+  
+  /* Media Query pour mobile */
+  @media screen and (max-width: 480px) {
+	.fpImg {
+	  height: 150px; /* Ajuster la hauteur maximale pour les mobiles */
+	}
+  
+	.fpItem {
+	  flex-basis: calc(50% - 10px); /* Pour afficher en deux colonnes, moins le gap */
+	}
+  }
+  

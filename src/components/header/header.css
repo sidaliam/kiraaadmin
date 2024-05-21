@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  height: 200px;
+  height: 220px;
 }
 
 a {
@@ -220,9 +220,7 @@ span {
 
 }
 
-/* Effet au survol (hover) */
-.icon-container:hover {
-}
+
 
 .icon:hover {
   transform: rotate(20deg); /* Rotation de l'icône au survol */
@@ -376,5 +374,9 @@ button {
 
   span {
     font-size: x-small;
+  }
+
+  .logoutBtn {
+   margin-top: 4%;
   }
 }

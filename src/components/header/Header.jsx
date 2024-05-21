@@ -73,14 +73,7 @@ const Header = ({ type }) => {
                     </a>
                   </div>
 
-                  <div class="icon-wrapper">
-                    <a href="/confirmations">
-                      <div class="icon-container">
-                        <FontAwesomeIcon icon={faWarehouse} className="icon" />
-                      </div>
-                      <span className="icon-title">garage</span>
-                    </a>
-                  </div>
+                  
                 </div>
               </div>
 

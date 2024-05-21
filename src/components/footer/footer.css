@@ -1,0 +1,66 @@
+.bodyc{
+  margin:0;
+  overflow-x:hidden;
+  }
+  
+  .footerf{
+  background:#1f0779;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footerf .rowx{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+
+  #ico{
+    width: 60px;
+    height: 30px;
+    margin-right: 50px;
+    color: white;
+  }
+  
+  .footerf .rowx a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footerf .rowx a:hover{
+  color:#fff;
+  }
+  
+  
+  
+  .footerf .rowx ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footerf .rowx a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+
+ 
+  
+  @media (max-width:720px){
+  .footerf{
+  text-align:center;
+  padding:5%;
+  }
+  .footerf .rowx ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  
+  }
+  .footerf .rowx a i{
+  margin:0% 3%;
+  }
+  }

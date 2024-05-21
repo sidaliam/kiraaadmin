@@ -1,0 +1,182 @@
+.searchItem {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.siImg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.siDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 2;
+}
+
+.siTitle {
+  font-size: 20px;
+  color: #0071c2;
+}
+
+.siDistance {
+  font-size: 12px;
+}
+
+.siTaxiOp {
+  font-size: 12px;
+  background-color: #008009;
+  color: white;
+  width: max-content;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.siSubtitle{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Style pour siFeatures */
+.siFeatures {
+  font-size: 16px; /* Augmenter la taille de la police pour une meilleure lisibilité sur les appareils mobiles */
+  list-style: none; /* Supprimer les puces de la liste */
+  padding-left: 0; /* Supprimer le padding par défaut des listes */
+  max-height: 150px; /* Hauteur maximale avant le défilement */
+  overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+  
+}
+
+/* Style pour chaque élément li */
+.siFeatures li {
+  color: #333; /* Couleur du texte */
+  transition: transform 0.3s ease; /* Ajouter une transition pour une animation douce */
+}
+
+/* Style pour hover sur chaque élément li */
+.siFeatures li:hover {
+  transform: scale(0.9); /* Légère mise à l'échelle au survol */
+}
+
+.vt{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.siCancelOp{
+  font-size: 12px;
+  color: #008009;
+  font-weight: bold;
+}
+
+.siCancelOpSubtitle{
+  font-size: 12px;
+  color: #008009;
+}
+
+.siDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.siRating{
+  display: flex;
+  justify-content: space-between
+}
+
+.siRating>span{
+  font-weight: 500;
+}
+.siRating>button{
+ background-color: #003580;
+ color: white;
+ padding: 5px;
+ font-weight: bold;
+ border: none;
+}
+
+.siDetailTexts{
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.siPrice{
+  font-size: 24px;
+}
+
+.siTaxOp{
+  font-size: 12px;
+  color: gray;
+}
+
+.siCheckButton{
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  padding: 10px 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Styles pour les écrans de taille moyenne comme les tablettes */
+@media screen and (max-width: 768px) {
+  .searchItem {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+
+  .siDesc {
+    flex: auto; /* Remplir l'espace disponible */
+    text-align: center; /* Centrer le texte */
+    margin-top: 10px; /* Ajouter un espace en haut pour séparer de l'image */
+  }
+
+  .siRating {
+    flex-direction: column; /* Afficher les éléments de notation en colonne */
+    align-items: center; /* Centrer les éléments de notation */
+  }
+  
+  .siRating > button {
+    margin-top: 10px; /* Espacement entre le texte et le bouton de notation */
+  }
+}
+
+/* Styles pour les petits écrans comme les mobiles */
+@media screen and (max-width: 480px) {
+  .siTitle {
+    font-size: 18px; /* Réduire la taille du titre pour les petits écrans */
+  }
+
+  .siFeatures {
+    max-height: 100px; /* Réduire la hauteur de la liste des fonctionnalités */
+  }
+
+  .siDetailTexts {
+    text-align: left; /* Aligner le texte à gauche pour une meilleure lisibilité */
+  }
+
+  .siPrice {
+    font-size: 20px; /* Réduire la taille du prix pour les petits écrans */
+  }
+
+  .siCheckButton {
+    font-size: 14px; /* Réduire la taille du bouton */
+    padding: 8px 5px; /* Ajuster le padding */
+  }
+}
