@@ -83,12 +83,6 @@ export const hotelInputs = [
     placeholder: "agence/ particulier",
   },
   {
-    id: "city",
-    label: "ville",
-    type: "text",
-    placeholder: "alger ...",
-  },
-  {
     id: "address",
     label: "Address",
     type: "text",

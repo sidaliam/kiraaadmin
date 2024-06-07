@@ -10,13 +10,75 @@ import { useNavigate } from "react-router-dom";
 import Header from "../../components/header/Header";
 import { axiosinstance } from "../../config";
 
+
+const wilayas = [
+  "Adrar",
+  "Chlef",
+  "Laghouat",
+  "Oum El Bouaghi",
+  "Batna",
+  "Béjaïa",
+  "Biskra",
+  "Béchar",
+  "Blida",
+  "Bouira",
+  "Tamanrasset",
+  "Tébessa",
+  "Tlemcen",
+  "Tiaret",
+  "Tizi Ouzou",
+  "Alger",
+  "Djelfa",
+  "Jijel",
+  "Sétif",
+  "Saïda",
+  "Skikda",
+  "Sidi Bel Abbès",
+  "Annaba",
+  "Guelma",
+  "Constantine",
+  "Médéa",
+  "Mostaganem",
+  "M'Sila",
+  "Mascara",
+  "Ouargla",
+  "Oran",
+  "El Bayadh",
+  "Illizi",
+  "Bordj Bou Arreridj",
+  "Boumerdès",
+  "El Tarf",
+  "Tindouf",
+  "Tissemsilt",
+  "El Oued",
+  "Khenchela",
+  "Souk Ahras",
+  "Tipaza",
+  "Mila",
+  "Aïn Defla",
+  "Naâma",
+  "Aïn Témouchent",
+  "Ghardaïa",
+  "Relizane",
+  "Timimoun",
+  "Bordj Badji Mokhtar",
+  "Ouled Djellal",
+  "Béni Abbès",
+  "In Salah",
+  "In Guezzam",
+  "Touggourt",
+  "Djanet",
+  "El M'Ghair",
+  "El Meniaa"
+];
+
 const Newhotels = () => {
   const [files, setFiles] = useState("");
   const [info, setinfo] = useState({});
   const [rooms, setrooms] = useState([]);
-  const { user} = useContext(AuthContext);
-  const iduser = user._id
-  const navigate=useNavigate()
+  const { user } = useContext(AuthContext);
+  const iduser = user._id;
+  const navigate = useNavigate();
 
   const handlechange = (e) => {
     setinfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -39,7 +101,7 @@ const Newhotels = () => {
         })
       );
 
-      console.log("List of URLs:", list); 
+      console.log("List of URLs:", list);
 
       const newHotel = {
         ...info,
@@ -47,7 +109,7 @@ const Newhotels = () => {
         photos: list,
       };
       await axiosinstance.post(`/hotels/${iduser}`, newHotel);
-      navigate("/hotels")
+      navigate("/hotels");
     } catch (err) {
       console.log(err);
     }
@@ -63,9 +125,8 @@ const Newhotels = () => {
 
   return (
     <div className="new">
-      
       <div className="newContainer">
-      <Header/>
+        <Header />
         <div className="top">
           <h1>Add New agence de location</h1>
         </div>
@@ -107,6 +168,18 @@ const Newhotels = () => {
                 </div>
               ))}
               
+              <div className="formInput">
+                <label>Wilaya</label>
+                <select id="city" onChange={handlechange}>
+                  {wilayas.map((wilaya) => (
+                    <option key={wilaya} value={wilaya}>
+                      {wilaya}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+
               
               <button onClick={handleclick}>ajouter</button>
             </form>
